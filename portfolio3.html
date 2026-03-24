@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公众号运营 - 张议令作品集</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#10b981',
+            accent1: '#6366f1',
+            accent2: '#f59e0b',
+            accent3: '#ec4899',
+            dark: '#1e293b',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .transition-all-300 {
+        transition: all 300ms ease-in-out;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+  <!-- 导航栏容器 -->
+  <div id="navbar-container"></div>
+
+  <!-- 作品详情部分 -->
+  <section class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center mb-8">
+        <a href="index.html#portfolio" class="text-accent1 hover:underline flex items-center mr-4">
+          <i class="fa fa-arrow-left mr-2"></i> 返回主页
+        </a>
+        <h1 class="text-3xl font-bold">3. 公众号运营</h1>
+      </div>
+      
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">项目概述</h2>
+        <p class="text-lg">主要负责顺德就业通和顺德城市网以及其他与政府合作的微信公众号运营。其中，顺德就业通运营一年涨粉1.8w，破历史最高阅读量1.9w；顺德城市网运营5个月涨粉近5k，最高阅读量2.7w。</p>
+      </div>
+      
+      <!-- 顺德就业通公众号 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">1. 顺德就业通公众号</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="flex flex-col md:flex-row items-center mb-6">
+            <div class="w-32 h-32 bg-purple-100 rounded-full overflow-hidden flex items-center justify-center mb-4 md:mb-0 md:mr-6">
+              <img src="images/顺德就业通logo.jpg" alt="顺德就业通" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">顺德就业通</h3>
+              <p class="text-primary mb-2">政府合作项目 | 就业服务平台</p>
+              <p class="mb-0">运营时间：2022年3月 - 2023年2月</p>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3">运营成果</h4>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>发布256条内容，涨粉1.8w，破历史最高阅读量1.9w</li>
+              <li>完成8场线上活动策划</li>
+              <li>按时完成所有合作要求，确保公众号内容及时更新和发布</li>
+            </ul>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3">核心内容</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">就业政策解读</h5>
+                <p class="text-sm text-gray-600">及时发布和解读国家、省、市就业相关政策，帮助求职者了解最新就业信息。</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">招聘信息发布</h5>
+                <p class="text-sm text-gray-600">定期发布企业招聘信息，为求职者提供丰富的就业机会。</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">就业指导服务</h5>
+                <p class="text-sm text-gray-600">提供简历制作、面试技巧、职业规划等就业指导内容。</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">就业数据分析</h5>
+                <p class="text-sm text-gray-600">发布就业市场分析报告，帮助求职者了解就业趋势。</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- 顺德城市网公众号 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">2. 顺德城市网公众号</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="flex flex-col md:flex-row items-center mb-6">
+            <div class="w-32 h-32 bg-purple-100 rounded-full overflow-hidden flex items-center justify-center mb-4 md:mb-0 md:mr-6">
+              <img src="images/顺德城市网logo.jpg" alt="顺德城市网" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">顺德城市网</h3>
+              <p class="text-primary mb-2">城市文化与生活平台</p>
+              <p class="mb-0">运营时间：2022年4月 - 2022年9月</p>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3">运营成果</h4>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>每天发布2-3条资讯/人文内容</li>
+              <li>5个月涨粉近5k，最高阅读量2.7w</li>
+            </ul>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold mb-3">核心内容</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">城市新闻资讯</h5>
+                <p class="text-sm text-gray-600">及时发布顺德区最新新闻资讯，让市民了解城市发展动态。</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">文化活动推广</h5>
+                <p class="text-sm text-gray-600">宣传顺德区各类文化活动，丰富市民文化生活。</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">美食旅游推荐</h5>
+                <p class="text-sm text-gray-600">推荐顺德特色美食和旅游景点，促进文化旅游发展。</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h5 class="font-medium mb-2">市民生活服务</h5>
+                <p class="text-sm text-gray-600">提供市民生活相关的服务信息，方便市民日常生活。</p>
+              </div>
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+      
+      <!-- 其他公众号 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">其他公众号</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
+              <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+                <img src="images/容桂工人.jpg" alt="容桂工人" class="max-h-full object-contain">
+              </div>
+            </div>
+            <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
+              <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+                <img src="images/匠心勒流.jpg" alt="匠心勒流" class="max-h-full object-contain">
+              </div>
+            </div>
+            <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
+              <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+                <img src="images/魅力北滘.jpg" alt="魅力北滘" class="max-h-full object-contain">
+              </div>
+            </div>
+            <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
+              <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+                <img src="images/顺德教育.jpg" alt="顺德教育" class="max-h-full object-contain">
+              </div>
+            </div>
+            <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
+              <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+                <img src="images/水兴杏坛.jpg" alt="水兴杏坛" class="max-h-full object-contain">
+              </div>
+            </div>
+            <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
+              <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
+                <img src="images/蓬江区文化馆.jpg" alt="蓬江区文化馆" class="max-h-full object-contain">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 专业能力 -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-6">专业能力</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="bg-purple-50 p-6 rounded-lg space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-database text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">信息整合</h3>
+                <p>聚焦信息的全面性、真实性，整合来自多渠道的零散消息，进行系统化梳理、分类和筛选。</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-file-text-o text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">政策解读</h3>
+                <p>将专业术语密集的官方文件，转化为通俗易懂、贴近生活、实用性强的解读文章。</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-pencil text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">编辑排版</h3>
+                <p>以"读者友好"为核心，进行舒适合理的排版设计，兼顾美观度与可读性。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚容器 -->
+  <div id="footer-container"></div>
+
+  <!-- 回到顶部按钮容器 -->
+  <div id="back-to-top-container"></div>
+
+  <!-- 图片放大模态框 -->
+  <div id="mediaModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+    <div class="relative max-w-4xl max-h-[90vh] w-full flex items-center">
+      <button id="prevMediaBtn" class="absolute left-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 z-10">
+        <i class="fa fa-chevron-left text-xl"></i>
+      </button>
+      <button id="closeMediaBtn" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 z-10">
+        <i class="fa fa-times text-xl"></i>
+      </button>
+      <img id="modalImage" src="" alt="放大图片" class="max-w-full max-h-[90vh] object-contain mx-auto">
+      <button id="nextMediaBtn" class="absolute right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 z-10">
+        <i class="fa fa-chevron-right text-xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 加载公共脚本 -->
+  <script src="common.js"></script>
+  <script>
+    // 其他公众号图片数组
+    const otherWechatImages = [
+      'images/容桂工人.jpg',
+      'images/匠心勒流.jpg',
+      'images/魅力北滘.jpg',
+      'images/顺德教育.jpg',
+      'images/水兴杏坛.jpg',
+      'images/蓬江区文化馆.jpg'
+    ];
+    
+    let currentImageIndex = 0;
+    let currentSeries = [];
+    
+    function openMedia(src) {
+      const modal = document.getElementById('mediaModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      modalImage.src = src;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      
+      // 确定当前图片属于哪个系列
+      if (otherWechatImages.includes(src)) {
+        currentSeries = otherWechatImages;
+      }
+      
+      // 找到当前图片在数组中的索引
+      currentImageIndex = currentSeries.indexOf(src);
+    }
+    
+    function closeMedia() {
+      const modal = document.getElementById('mediaModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      modalImage.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    
+    function prevMedia() {
+      if (currentSeries.length > 0) {
+        currentImageIndex = (currentImageIndex - 1 + currentSeries.length) % currentSeries.length;
+        document.getElementById('modalImage').src = currentSeries[currentImageIndex];
+      }
+    }
+    
+    function nextMedia() {
+      if (currentSeries.length > 0) {
+        currentImageIndex = (currentImageIndex + 1) % currentSeries.length;
+        document.getElementById('modalImage').src = currentSeries[currentImageIndex];
+      }
+    }
+    
+    // 点击模态框外部关闭
+    document.getElementById('mediaModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeMedia();
+      }
+    });
+    
+    // 点击关闭按钮关闭
+    document.getElementById('closeMediaBtn').addEventListener('click', function() {
+      closeMedia();
+    });
+    
+    // 点击上一张按钮
+    document.getElementById('prevMediaBtn').addEventListener('click', function() {
+      prevMedia();
+    });
+    
+    // 点击下一张按钮
+    document.getElementById('nextMediaBtn').addEventListener('click', function() {
+      nextMedia();
+    });
+    
+    // 键盘导航
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('mediaModal').classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') {
+          prevMedia();
+        } else if (e.key === 'ArrowRight') {
+          nextMedia();
+        } else if (e.key === 'Escape') {
+          closeMedia();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

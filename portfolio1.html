@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阅芽计划小程序 - 张议令作品集</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#10b981',
+            accent1: '#6366f1',
+            accent2: '#f59e0b',
+            accent3: '#ec4899',
+            dark: '#1e293b',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .transition-all-300 {
+        transition: all 300ms ease-in-out;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+  <!-- 导航栏容器 -->
+  <div id="navbar-container"></div>
+
+  <!-- 作品详情部分 -->
+  <section class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center mb-8">
+        <a href="index.html#portfolio" class="text-primary hover:underline flex items-center mr-4">
+          <i class="fa fa-arrow-left mr-2"></i> 返回主页
+        </a>
+        <h1 class="text-3xl font-bold">阅芽计划小程序</h1>
+      </div>
+      
+      <!-- 项目背景 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">项目背景</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-semibold mb-2">项目概述</h3>
+              <p>“阅芽计划”小程序面向0-6岁少儿家庭，提供绘本推荐、早期阅读指导、阅读记录、亲子互动游戏等服务，助力儿童阅读习惯培养。</p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">迭代背景</h3>
+              <p>功能比较单一，仅覆盖少数核心需求，处于MVP阶段，后续将持续迭代优化。</p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">迭代目标</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>新增互动游戏、阅读圈、公益值兑换等核心功能，形成“读前-读中-读后”闭环</li>
+                <li>通过活动运营提升用户活跃度与留存率</li>
+                <li>优化已有板块，提升用户体验</li>
+              </ul>
+            </div>
+            <div class="mt-6">
+              <div class="flex gap-0">
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图1.png" alt="小程序截图1" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图1.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图2.png" alt="小程序截图2" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图2.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图3.png" alt="小程序截图3" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图3.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图4.png" alt="小程序截图4" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图4.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图5.png" alt="小程序截图5" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图5.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图6.png" alt="小程序截图6" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图6.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图7.png" alt="小程序截图7" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图7.png')">
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="aspect-[9/16] rounded-lg overflow-hidden">
+                    <img src="images/小程序截图8.png" alt="小程序截图8" class="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/小程序截图8.png')">
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 text-center mt-4">阅芽计划小程序部分页面展示</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 迭代历程 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">迭代历程</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <p class="mb-4">结合用户反馈、数据统计、业务需求，确定每次迭代核心需求，接手前仅有读前板块，接手后完成<b>“读前-读中-读后”</b>闭环：</p>
+          <div class="mb-8">
+            <div class="w-full max-w-3xl mx-auto">
+              <img src="images/读前读中读后.jpg" alt="读前读中读后" class="w-3/5 h-auto rounded-lg mx-auto">
+              <p class="text-sm text-gray-500 mt-4 text-center">加粗为在职期间新增功能</p>
+            </div>
+          </div>
+          <div class="mt-16">
+            <h3 class="font-semibold mb-8">版本迭代时间线</h3>
+            <div class="relative">
+              <!-- 第一行：3个版本 -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <!-- V11 -->
+                <div class="flex flex-col items-center relative">
+                  <div class="w-12 h-12 bg-accent1 text-white rounded-full flex items-center justify-center shadow-md z-10">
+                    <span class="font-semibold">V11</span>
+                  </div>
+                  <div class="bg-white rounded-lg p-4 shadow-md text-center mt-2 w-full">
+                    <p class="text-sm font-medium text-accent1 mb-1">23年6月</p>
+                    <p class="text-sm">新增每日一答答题记录、活动板块、公益值兑换板块</p>
+                  </div>
+                </div>
+                
+                <!-- V12 -->
+                <div class="flex flex-col items-center relative">
+                  <div class="w-12 h-12 bg-accent1 text-white rounded-full flex items-center justify-center shadow-md z-10">
+                    <span class="font-semibold">V12</span>
+                  </div>
+                  <div class="bg-white rounded-lg p-4 shadow-md text-center mt-2 w-full">
+                    <p class="text-sm font-medium text-accent1 mb-1">23年10月</p>
+                    <p class="text-sm">新增榜单（算法更新）、图书标签，改版我的记录页面</p>
+                  </div>
+                </div>
+                
+                <!-- V13 -->
+                <div class="flex flex-col items-center relative">
+                  <div class="w-12 h-12 bg-accent1 text-white rounded-full flex items-center justify-center shadow-md z-10">
+                    <span class="font-semibold">V13</span>
+                  </div>
+                  <div class="bg-white rounded-lg p-4 shadow-md text-center mt-2 w-full">
+                    <p class="text-sm font-medium text-accent1 mb-1">24年3月</p>
+                    <p class="text-sm">新增亲子共读节报名入口、阅读圈、互动游戏板块</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 第二行：3个版本 -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- V14 -->
+                <div class="flex flex-col items-center relative">
+                  <div class="w-12 h-12 bg-accent1 text-white rounded-full flex items-center justify-center shadow-md z-10">
+                    <span class="font-semibold">V14</span>
+                  </div>
+                  <div class="bg-white rounded-lg p-4 shadow-md text-center mt-2 w-full">
+                    <p class="text-sm font-medium text-accent1 mb-1">24年4月</p>
+                    <p class="text-sm">新增爱阅益选板块</p>
+                  </div>
+                </div>
+                
+                <!-- V15 -->
+                <div class="flex flex-col items-center relative">
+                  <div class="w-12 h-12 bg-accent1 text-white rounded-full flex items-center justify-center shadow-md z-10">
+                    <span class="font-semibold">V15</span>
+                  </div>
+                  <div class="bg-white rounded-lg p-4 shadow-md text-center mt-2 w-full">
+                    <p class="text-sm font-medium text-accent1 mb-1">24年8月</p>
+                    <p class="text-sm">每日一答新增“我也要出题”功能，首页新增搜索，优化阅读圈个人数据</p>
+                  </div>
+                </div>
+                
+                <!-- V16 -->
+                <div class="flex flex-col items-center relative">
+                  <div class="w-12 h-12 bg-accent1 text-white rounded-full flex items-center justify-center shadow-md z-10">
+                    <span class="font-semibold">V16</span>
+                  </div>
+                  <div class="bg-white rounded-lg p-4 shadow-md text-center mt-2 w-full">
+                    <p class="text-sm font-medium text-accent1 mb-1">24年12月</p>
+                    <p class="text-sm">新增2024年度报告、首页banner、阅读圈我的阅读清单</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 曲线连接线 - 第一行 -->
+              <div class="absolute top-0 left-0 right-0 z-0">
+                <svg class="w-full h-8" viewBox="0 0 1200 40" preserveAspectRatio="none">
+                  <path d="M0,20 C200,5 400,35 600,20 C800,5 1000,35 1200,20" stroke="#e2e8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+              
+              <!-- 曲线连接线 - 第二行 -->
+              <div class="absolute top-[200px] left-0 right-0 z-0">
+                <svg class="w-full h-8" viewBox="0 0 1200 40" preserveAspectRatio="none">
+                  <path d="M0,20 C200,5 400,35 600,20 C800,5 1000,35 1200,20" stroke="#e2e8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="mt-16">
+          </div>
+        </div>
+      </div>
+      
+      <!-- 产品运营 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">产品运营</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <p class="mb-4">统筹小程序整体运营策略的制定与落地：</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>策划绘本复刻征集、创作者直播、30天亲子共读挑战等儿童早期阅读主题线上活动</li>
+            <li>搭建16个社群，每日推送热点相关内容，维持小程序日活</li>
+            <li>通过多渠道内容输出推广，包括公众号、小红书、朋友圈广告及线下活动引流</li>
+          </ul>
+          <div class="mt-6">
+            <div class="flex gap-1">
+              <div class="flex-1">
+                <div class="h-96 rounded-lg overflow-hidden">
+                  <img src="images/绘本场景复刻作品征集.jpg" alt="绘本场景复刻作品征集" class="h-full w-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/绘本场景复刻作品征集.jpg')">
+                </div>
+                <p class="text-sm text-gray-500 text-center mt-2">绘本场景复刻作品征集</p>
+              </div>
+              <div class="flex-1">
+                <div class="h-96 rounded-lg overflow-hidden">
+                  <img src="images/创作者讲故事直播.jpg" alt="创作者讲故事直播" class="h-full w-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/创作者讲故事直播.jpg')">
+                </div>
+                <p class="text-sm text-gray-500 text-center mt-2">创作者讲故事直播</p>
+              </div>
+              <div class="flex-1">
+                <div class="h-96 rounded-lg overflow-hidden">
+                  <img src="images/社群运营.jpg" alt="社群运营" class="h-full w-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/社群运营.jpg')">
+                </div>
+                <p class="text-sm text-gray-500 text-center mt-2">社群运营</p>
+              </div>
+              <div class="flex-1">
+                <div class="h-96 rounded-lg overflow-hidden">
+                  <img src="images/朋友圈广告.jpg" alt="朋友圈广告" class="h-full w-full object-contain cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/朋友圈广告.jpg')">
+                </div>
+                <p class="text-sm text-gray-500 text-center mt-2">朋友圈广告</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 核心成果 -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">核心成果</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
+            <h3 class="text-lg font-medium mb-6">在职期间新增用户</h3>
+            <p class="text-4xl font-bold text-accent1">30w+</p>
+          </div>
+          <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
+            <h3 class="text-lg font-medium mb-6">突破最高日活</h3>
+            <p class="text-4xl font-bold text-accent1">1w+</p>
+          </div>
+          <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
+            <h3 class="text-lg font-medium mb-6">用户满意度</h3>
+            <p class="text-4xl font-bold text-accent1">90%+</p>
+          </div>
+          <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
+            <h3 class="text-lg font-medium mb-6">多板块浏览人次</h3>
+            <p class="text-4xl font-bold text-accent1">创3年新高</p>
+            <p class="text-sm text-gray-600 mt-2">（亲子共读小百科同比增长<span class="text-red-500 font-bold">283%</span></p>
+            <p class="text-sm text-gray-600">每日一答同比增长<span class="text-red-500 font-bold">254%</span>）</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 专业能力 -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-6">专业能力</h2>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-list-ul text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">需求梳理</h3>
+                <p>整理用户反馈，输出PRD文档，明确功能优化细节</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-pencil text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">方案设计</h3>
+                <p>主导页面原型设计，对接UI设计师确定视觉与交互逻辑</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-users text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">跨团队协作</h3>
+                <p>协调开发、测试团队，明确排期，解决需求争议</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-check-circle text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">上线验收</h3>
+                <p>参与上线前测试，确保功能符合需求预期</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-bug text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">问题排查</h3>
+                <p>每日深度使用小程序，及时发现bug并反馈至开发团队</p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <div class="rounded-lg overflow-hidden">
+                <img src="images/原型图5.png" alt="原型图5" class="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity" onclick="openMedia('images/原型图5.png')">
+              </div>
+              <p class="text-sm text-gray-500 text-center mt-2">部分原型图</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图片放大模态框 -->
+  <div id="mediaModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+    <div class="relative max-w-4xl max-h-[90vh] w-full flex items-center">
+      <button id="prevMediaBtn" class="absolute left-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 z-10">
+        <i class="fa fa-chevron-left text-xl"></i>
+      </button>
+      <button id="closeMediaBtn" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 z-10">
+        <i class="fa fa-times text-xl"></i>
+      </button>
+      <img id="modalImage" src="" alt="放大图片" class="max-w-full max-h-[90vh] object-contain mx-auto">
+      <button id="nextMediaBtn" class="absolute right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 z-10">
+        <i class="fa fa-chevron-right text-xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 页脚容器 -->
+  <div id="footer-container"></div>
+
+  <!-- 回到顶部按钮容器 -->
+  <div id="back-to-top-container"></div>
+
+  <!-- 加载公共脚本 -->
+  <script src="common.js"></script>
+  <script>
+    // 图片系列数组
+    const imageSeries = {
+      appScreenshots: [
+        'images/小程序截图1.png',
+        'images/小程序截图2.png',
+        'images/小程序截图3.png',
+        'images/小程序截图4.png',
+        'images/小程序截图5.png',
+        'images/小程序截图6.png',
+        'images/小程序截图7.png',
+        'images/小程序截图8.png'
+      ],
+      operationImages: [
+        'images/绘本场景复刻作品征集.jpg',
+        'images/创作者讲故事直播.jpg',
+        'images/社群运营.jpg',
+        'images/朋友圈广告.jpg'
+      ]
+    };
+    
+    let currentImageIndex = 0;
+    let currentSeries = [];
+    
+    function openMedia(src) {
+      const modal = document.getElementById('mediaModal');
+      const modalImage = document.getElementById('modalImage');
+      const prevBtn = document.getElementById('prevMediaBtn');
+      const nextBtn = document.getElementById('nextMediaBtn');
+      
+      modalImage.src = src;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      
+      // 确定当前图片属于哪个系列
+      if (imageSeries.appScreenshots.includes(src)) {
+        currentSeries = imageSeries.appScreenshots;
+        // 显示导航按钮
+        prevBtn.classList.remove('hidden');
+        nextBtn.classList.remove('hidden');
+      } else if (imageSeries.operationImages.includes(src)) {
+        currentSeries = imageSeries.operationImages;
+        // 显示导航按钮
+        prevBtn.classList.remove('hidden');
+        nextBtn.classList.remove('hidden');
+      } else {
+        // 单独的图片，隐藏导航按钮
+        currentSeries = [];
+        prevBtn.classList.add('hidden');
+        nextBtn.classList.add('hidden');
+      }
+      
+      // 找到当前图片在数组中的索引
+      currentImageIndex = currentSeries.indexOf(src);
+    }
+    
+    function closeMedia() {
+      const modal = document.getElementById('mediaModal');
+      const modalImage = document.getElementById('modalImage');
+      const prevBtn = document.getElementById('prevMediaBtn');
+      const nextBtn = document.getElementById('nextMediaBtn');
+      
+      modalImage.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      
+      // 重置导航按钮状态
+      prevBtn.classList.remove('hidden');
+      nextBtn.classList.remove('hidden');
+    }
+    
+    function prevMedia() {
+      if (currentSeries.length > 0) {
+        currentImageIndex = (currentImageIndex - 1 + currentSeries.length) % currentSeries.length;
+        document.getElementById('modalImage').src = currentSeries[currentImageIndex];
+      }
+    }
+    
+    function nextMedia() {
+      if (currentSeries.length > 0) {
+        currentImageIndex = (currentImageIndex + 1) % currentSeries.length;
+        document.getElementById('modalImage').src = currentSeries[currentImageIndex];
+      }
+    }
+    
+    // 点击模态框外部关闭
+    document.getElementById('mediaModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeMedia();
+      }
+    });
+    
+    // 点击关闭按钮关闭
+    document.getElementById('closeMediaBtn').addEventListener('click', function() {
+      closeMedia();
+    });
+    
+    // 点击上一张按钮
+    document.getElementById('prevMediaBtn').addEventListener('click', function() {
+      prevMedia();
+    });
+    
+    // 点击下一张按钮
+    document.getElementById('nextMediaBtn').addEventListener('click', function() {
+      nextMedia();
+    });
+    
+    // 键盘导航
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('mediaModal').classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') {
+          prevMedia();
+        } else if (e.key === 'ArrowRight') {
+          nextMedia();
+        } else if (e.key === 'Escape') {
+          closeMedia();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张议令 - 个人简历</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#10b981',
+            accent1: '#6366f1',
+            accent2: '#f59e0b',
+            accent3: '#ec4899',
+            dark: '#1e293b',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .transition-all-300 {
+        transition: all 300ms ease-in-out;
+      }
+    }
+    
+    .portfolio-card {
+      transition: all 0.3s ease;
+    }
+    
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .experience-card {
+      transition: all 0.3s ease;
+    }
+    
+    .experience-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    @keyframes pulse-border {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+      }
+    }
+    
+    .animate-pulse-border {
+      animation: pulse-border 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+  <!-- 导航栏容器 -->
+  <div id="navbar-container"></div>
+
+  <!-- 个人信息部分 -->
+  <section id="about" class="pt-32 pb-32 bg-gradient-to-br from-blue-50 to-white min-h-[80vh] flex items-center">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div class="md:w-2/5">
+            <div class="relative">
+              <div class="relative rounded-full overflow-hidden border-4 border-white shadow-lg w-56 h-56 mx-auto animate-pulse-border">
+                <img src="images/头像.jpg" alt="张议令" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+          <div class="md:w-3/5 space-y-6">
+            <div class="space-y-2">
+              <h1 class="text-4xl font-bold">张议令</h1>
+              <div class="h-1 w-20 bg-primary rounded-full"></div>
+            </div>
+            <h2 class="text-xl text-primary">意向岗位：产品经理/新媒体运营</h2>
+            <p class="text-lg">28岁 | 已婚 | 广东深圳</p>
+            <p class="text-lg">我是INTJ x 摩羯（<span style="text-decoration: line-through;">卷王</span>），一个喜欢接触新领域且喜欢挑战的人。</p>
+            <p class="text-lg">4年运营经验+2年产品经验，想往<b>AI+产品</b>方向前行</p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-all-300">
+                <i class="fa fa-envelope mr-2"></i> 联系我
+              </a>
+              <a href="#portfolio" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-all-300">
+                <i class="fa fa-briefcase mr-2"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育经历部分 -->
+  <section id="education" class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">教育经历</h2>
+          <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex flex-col md:flex-row items-start gap-8">
+            <div class="md:w-1/3">
+              <div class="bg-primary text-white rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold mb-2">2016.08 - 2020.05</div>
+                <div class="text-lg"><i class="fa fa-map-marker mr-2"></i> 汕头</div>
+              </div>
+            </div>
+            <div class="md:w-2/3">
+              <h3 class="text-2xl font-semibold mb-4">汕头大学</h3>
+              <p class="text-lg mb-4">广播电视学 本科 | 长江新闻与传播学院</p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                  <span>GPA: 3.66 / 5.0（专业前20%）</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                  <span>曾获二等学业奖学金</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历部分 -->
+  <section id="experience" class="py-24 bg-light">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">工作经历</h2>
+          <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        </div>
+        
+        <!-- 工作经历1 -->
+        <div class="mb-16 bg-white rounded-xl shadow-md overflow-hidden experience-card">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 bg-primary text-white p-8 flex flex-col justify-center">
+              <div class="text-2xl font-bold">2023.03 - 2025.03</div>
+              <div class="mt-4 text-xl"><i class="fa fa-map-marker mr-2"></i> 深圳</div>
+            </div>
+            <div class="md:w-3/4 p-8">
+              <h3 class="text-2xl font-semibold mb-4">深圳市爱阅公益基金会</h3>
+              <p class="text-xl text-primary mb-6"><b>小程序运营主管</b></p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-cogs"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">产品迭代</h4>
+                    <p>主导“阅芽计划”小程序6期产品迭代，牵头挖掘C端家长核心需求与业务痛点，输出需求文档及交互方案，协同设计、技术团队推进版本迭代与功能优化，上线了公益值兑换、阅读圈、主题活动等多个核心板块。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-line-chart"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">运营增长</h4>
+                    <p>统筹小程序整体运营策略的制定与落地，策划儿童早期阅读主题线上活动（绘本复刻挑战，创作者讲故事等）、搭建16个社群运营、拓展多渠道推广路径（小红书，朋友圈广告等），在职期间实现小程序新增用户30w+，最高日活突破1w+。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">数据驱动</h4>
+                    <p>基于小程序用户行为数据、活动转化数据开展复盘分析，提炼产品优化方向与运营策略调整思路，构建数据 - 迭代 - 运营的闭环管理体系。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 工作经历2 -->
+        <div class="mb-16 bg-white rounded-xl shadow-md overflow-hidden experience-card">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 bg-secondary text-white p-8 flex flex-col justify-center">
+              <div class="text-2xl font-bold">2022.03 - 2023.02</div>
+              <div class="mt-4 text-xl"><i class="fa fa-map-marker mr-2"></i> 佛山</div>
+            </div>
+            <div class="md:w-3/4 p-8">
+              <h3 class="text-2xl font-semibold mb-4">佛山市顺德区阳光城市文化广告传媒有限公司</h3>
+              <p class="text-xl text-primary mb-6"><b>新媒体运营</b></p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-pencil"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">内容运营</h4>
+                    <p>负责新闻网站、微博、App等新媒体平台的内容运营，在职期间共发布原创稿120篇，包括传统节点和热点做内容策划，如条漫、SVG、海报、短视频等内容。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-weixin"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">公众号运营</h4>
+                    <p>主要负责顺德就业通（政府合作）和顺德城市网等微信公众号运营。其中，顺德就业通运营一年涨粉1.8w，破历史最高阅读量1.9w；顺德城市网运营5个月涨粉近5k，最高阅读量2.7w。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2">跨部门协同</h4>
+                    <p>配合线上、线下活动的策划与执行，如采风活动和美食探店活动，同时，协调一线部门，独立完成日常采访、编辑、拍摄、剪辑工作。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 工作经历3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden experience-card">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 bg-accent1 text-white p-8 flex flex-col justify-center">
+              <div class="text-2xl font-bold">2020.12 - 2022.02</div>
+              <div class="mt-4 text-xl"><i class="fa fa-map-marker mr-2"></i> 江门</div>
+            </div>
+            <div class="md:w-3/4 p-8">
+              <h3 class="text-2xl font-semibold mb-4">江门市蓬江区文化馆</h3>
+              <p class="text-xl text-primary mb-6"><b>信息部行政辅助人员</b></p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-newspaper-o"></i>
+                  </div>
+                  <div>
+                    <p>负责运营微信公众号、官方网站、视频号，抖音号等平台。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-8 h-8 bg-accent1 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fa fa-desktop"></i>
+                  </div>
+                  <div>
+                    <p>负责部分活动的海报和背景板、门票、视频背景设计，以及负责拍摄活动现场花絮并剪辑发布。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集部分 -->
+  <section id="portfolio" class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">作品集</h2>
+          <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 作品1 -->
+          <div class="bg-blue-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all-300 p-8 portfolio-card">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mr-4">
+                <i class="fa fa-mobile text-3xl text-blue-600"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">阅芽计划小程序</h3>
+            </div>
+            <p class="text-xl text-primary mb-6"><b>产品策划与运营</b></p>
+            <p class="mb-8">主导6期产品迭代，上线公益值兑换、阅读圈、主题活动等核心板块，实现新增用户30w+。</p>
+            <a href="portfolio1.html" class="inline-flex items-center bg-blue-100 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors">
+              查看详情 <i class="fa fa-arrow-right ml-3"></i>
+            </a>
+          </div>
+          
+          <!-- 作品2 -->
+          <div class="bg-purple-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all-300 p-8 portfolio-card">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mr-4">
+                <i class="fa fa-pencil text-3xl text-purple-600"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">原创内容产出</h3>
+            </div>
+            <p class="text-xl text-primary mb-6"><b>内容创作与设计</b></p>
+            <p class="mb-8">包括资讯稿、人物采访、当地人文、SVG类推文、长图海报、短视频等多种内容形式。</p>
+            <a href="portfolio2.html" class="inline-flex items-center bg-purple-100 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-200 transition-colors">
+              查看详情 <i class="fa fa-arrow-right ml-3"></i>
+            </a>
+          </div>
+          
+          <!-- 作品3 -->
+          <div class="bg-pink-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all-300 p-8 portfolio-card">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center mr-4">
+                <i class="fa fa-weixin text-3xl text-pink-600"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">公众号运营</h3>
+            </div>
+            <p class="text-xl text-primary mb-6"><b>新媒体运营</b></p>
+            <p class="mb-8">负责顺德就业通（政府合作）和顺德城市网等微信公众号运营，实现显著粉丝增长。</p>
+            <a href="portfolio3.html" class="inline-flex items-center bg-pink-100 text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-200 transition-colors">
+              查看详情 <i class="fa fa-arrow-right ml-3"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能部分 -->
+  <section id="skills" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">技能与爱好</h2>
+          <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 技能 -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">专业技能</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>熟练使用 Office 办公软件</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>改&做一些图像设计（PS）</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>视频剪辑（PR、FINAL CUT、剪映）</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>排版公众号推文（秀米、135等编辑器）</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>可通过AI编程软件完成小项目（如本网站）</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>英语六级</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-check-circle text-primary mr-3"></i>
+                <span>精通粤语</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- 证书 -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">兴趣爱好</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fa fa-heart text-primary mr-3"></i>
+                <span>全国各地玩儿</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-heart text-primary mr-3"></i>
+                <span>看书（小说、文学都有）</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-heart text-primary mr-3"></i>
+                <span>户外运动（爬山、出海）</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa fa-heart text-primary mr-3"></i>
+                <span>喜欢学新事物（游泳、吉他）</span>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式部分 -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">联系方式</h2>
+          <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        </div>
+      <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md text-center">
+        <div class="space-y-6">
+          <div class="flex items-center justify-center">
+            <i class="fa fa-phone text-primary mr-4 text-xl"></i>
+            <span class="text-xl">13794110462（微信同号）</span>
+          </div>
+          <div class="flex items-center justify-center">
+            <i class="fa fa-envelope text-primary mr-4 text-xl"></i>
+            <span class="text-xl">769026964@qq.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚容器 -->
+  <div id="footer-container"></div>
+
+  <!-- 回到顶部按钮容器 -->
+  <div id="back-to-top-container"></div>
+
+  <!-- 加载公共脚本 -->
+  <script src="common.js"></script>
+</body>
+</html>
