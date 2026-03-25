@@ -65,7 +65,7 @@
         <div class="bg-white rounded-lg p-6 shadow-md">
           <div class="flex flex-col md:flex-row items-center mb-6">
             <div class="w-32 h-32 bg-purple-100 rounded-full overflow-hidden flex items-center justify-center mb-4 md:mb-0 md:mr-6">
-              <img src="images/顺德就业通logo.jpg" alt="顺德就业通" class="w-full h-full object-cover">
+              <img data-src="images/顺德就业通logo.jpg" alt="顺德就业通" class="w-full h-full object-cover lazy">
             </div>
             <div>
               <h3 class="text-xl font-semibold mb-2">顺德就业通</h3>
@@ -114,7 +114,7 @@
         <div class="bg-white rounded-lg p-6 shadow-md">
           <div class="flex flex-col md:flex-row items-center mb-6">
             <div class="w-32 h-32 bg-purple-100 rounded-full overflow-hidden flex items-center justify-center mb-4 md:mb-0 md:mr-6">
-              <img src="images/顺德城市网logo.jpg" alt="顺德城市网" class="w-full h-full object-cover">
+              <img data-src="images/顺德城市网logo.jpg" alt="顺德城市网" class="w-full h-full object-cover lazy">
             </div>
             <div>
               <h3 class="text-xl font-semibold mb-2">顺德城市网</h3>
@@ -164,32 +164,32 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
               <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
-                <img src="images/容桂工人.jpg" alt="容桂工人" class="max-h-full object-contain">
+                <img data-src="images/容桂工人.jpg" alt="容桂工人" class="max-h-full object-contain lazy">
               </div>
             </div>
             <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
               <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
-                <img src="images/匠心勒流.jpg" alt="匠心勒流" class="max-h-full object-contain">
+                <img data-src="images/匠心勒流.jpg" alt="匠心勒流" class="max-h-full object-contain lazy">
               </div>
             </div>
             <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
               <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
-                <img src="images/魅力北滘.jpg" alt="魅力北滘" class="max-h-full object-contain">
+                <img data-src="images/魅力北滘.jpg" alt="魅力北滘" class="max-h-full object-contain lazy">
               </div>
             </div>
             <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
               <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
-                <img src="images/顺德教育.jpg" alt="顺德教育" class="max-h-full object-contain">
+                <img data-src="images/顺德教育.jpg" alt="顺德教育" class="max-h-full object-contain lazy">
               </div>
             </div>
             <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
               <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
-                <img src="images/水兴杏坛.jpg" alt="水兴杏坛" class="max-h-full object-contain">
+                <img data-src="images/水兴杏坛.jpg" alt="水兴杏坛" class="max-h-full object-contain lazy">
               </div>
             </div>
             <div class="bg-purple-50 py-3 px-3 rounded-lg text-center">
               <div class="h-40 overflow-hidden rounded-lg flex items-center justify-center bg-white">
-                <img src="images/蓬江区文化馆.jpg" alt="蓬江区文化馆" class="max-h-full object-contain">
+                <img data-src="images/蓬江区文化馆.jpg" alt="蓬江区文化馆" class="max-h-full object-contain lazy">
               </div>
             </div>
           </div>
@@ -345,6 +345,26 @@
           closeMedia();
         }
       }
+    });
+    
+    // 图片懒加载功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const lazyImages = document.querySelectorAll('img.lazy');
+      
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      lazyImages.forEach(img => {
+        imageObserver.observe(img);
+      });
     });
   </script>
 </body>
